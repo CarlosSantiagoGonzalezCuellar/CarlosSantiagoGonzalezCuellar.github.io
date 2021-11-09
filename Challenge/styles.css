@@ -1,0 +1,24 @@
+/*body{
+    background: #333;
+    background-image: radial-gradient(circle, #46a6cc, #1c60c7);
+  }
+
+  h1 {
+    font-size: 2.3em;
+    line-height: 1.3em;
+    margin: 15px 0;
+    text-align: center;
+    font-weight: 300;
+    background: #333;
+    color: white;
+    height: 80px;
+  }
+
+p, ul, ol, li, header{
+    font-size: 1.2em;
+}
+
+input{
+    font-size: 1.3em;
+}
+
