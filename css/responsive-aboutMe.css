@@ -1,6 +1,5 @@
 /* responsive-aboutMe.css */
-/* Ajustes responsivos para complement/aboutMe.html */
-/* Mantiene el diseño original con adaptación a móviles */
+/* Corrige apilamiento de imagen y texto, manteniendo proporciones */
 
 @media (max-width: 1024px) {
   .about-container {
@@ -10,26 +9,31 @@
 
 @media (max-width: 768px) {
   .about-container {
+    display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    gap: 1rem;
   }
 
   .about-container img {
-    max-width: 80%;
+    width: 85%;
+    max-width: 350px;
     height: auto;
     margin-bottom: 1rem;
   }
 
   .about-text {
+    width: 90%;
     font-size: 1rem;
-    line-height: 1.5;
+    line-height: 1.6;
   }
 }
 
 @media (max-width: 480px) {
   body {
     font-size: 0.9rem;
+    overflow-x: hidden;
   }
 
   .about-text h2 {
