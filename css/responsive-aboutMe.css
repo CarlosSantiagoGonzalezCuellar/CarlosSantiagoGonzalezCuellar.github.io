@@ -1,5 +1,9 @@
 /* Estilos responsivos para aboutMe.html */
 @media (max-width: 768px) {
+  .wrapper {
+    height: auto;
+    padding-bottom: 2em;
+  }
   /* 1. Navegación */
   .navbar {
     flex-direction: column;
