@@ -1,98 +1,108 @@
-/* responsive-index.css */
-/* Corrige apilamiento y desbordes en móviles manteniendo el diseño original */
-
-@media (max-width: 1024px) {
-  header, nav, section, footer {
-    padding: 1rem;
-  }
-}
-
+/* Estilos responsivos para index.html */
 @media (max-width: 768px) {
-  /* NAV */
-  nav ul {
-    display: flex;
-    flex-direction: column;
+  /* 1. Navegación */
+  .navbar {
+    flex-direction: column; /* Apila el logo y el menú */
     align-items: center;
-    gap: 0.75rem;
-    padding: 0;
+    gap: 1em;
   }
-
-  nav li {
-    display: block;
-    margin: 0.5rem 0;
-  }
-
-  header h1 {
-    font-size: 1.8rem;
-    text-align: center;
-  }
-
-  /* SECCIÓN PRINCIPAL (texto + imagen) */
-  .main-container, .about-container, section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 1rem;
-  }
-
-  .main-container img, .about-container img, section img {
-    width: 90%;
-    max-width: 350px;
-    height: auto;
-  }
-
-  /* Portafolio */
-  .portfolio-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-    justify-items: center;
-  }
-
-  .portfolio-item {
-    width: 90%;
-  }
-
-  /* Contacto */
-  .contact-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-  }
-
-  footer {
-    text-align: center;
-    font-size: 0.9rem;
-  }
-}
-
-@media (max-width: 480px) {
-  body {
-    font-size: 0.95rem;
-    overflow-x: hidden;
-  }
-
-  header h1 {
-    font-size: 1.5rem;
-  }
-
-  /* Todo en una columna */
-  .portfolio-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .contact-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .main-container img {
+  .menu {
+    flex-direction: column; /* Apila los elementos del menú */
     width: 100%;
+    align-items: center;
+    gap: 0.5em;
+  }
+  .menu li {
+    width: 100%;
+    text-align: center;
+  }
+  .menu a {
+    display: block; /* Hace que el enlace ocupe todo el ancho */
+  }
+
+  /* 2. Sección principal (Hero) */
+  .main {
+    grid-template-columns: 1fr; /* Cambia a una sola columna */
+    width: 90vw;
+    height: auto; /* Permite que la altura se ajuste al contenido */
+    margin: 2em auto;
+    text-align: center;
+  }
+  .main img {
+    order: -1; /* Mueve la imagen arriba del texto */
+    width: 80%; /* Hace la imagen responsiva */
     max-width: 300px;
+    height: auto; /* Mantiene la proporción */
+    margin: 0 auto; /* Centra la imagen */
+  }
+  h1 {
+    font-size: 2.5em; /* Reduce un poco el tamaño del título */
   }
 
-  button, a, input {
+  /* 3. Sección "Sobre Mí" */
+  .about {
+    grid-template-columns: 1fr; /* Cambia a una sola columna */
+    width: 100vw;
+  }
+  .about img {
+    grid-column: 1 / -1;
     width: 100%;
-    box-sizing: border-box;
+  }
+  .about-info {
+    grid-column: 1 / -1;
+    padding: 2em;
+    text-align: center;
+  }
+  .divider {
+    margin-left: auto;
+    margin-right: auto; /* Centra el divisor */
+  }
+
+  /* 4. Sección "Portafolio" */
+  .portfolio-heading {
+    padding: 3em 2em 2em 2em;
+    text-align: center;
+  }
+  .portfolio .container {
+    width: 90vw;
+    height: auto; /* CRÍTICO: quita la altura fija de 180vh */
+    flex-direction: column; /* Apila las tarjetas */
+    align-items: center;
+    padding-bottom: 2em;
+  }
+  .card {
+    width: 100%; /* Las tarjetas ocupan el ancho disponible */
+    max-width: 350px;
+    margin: 1em 0;
+  }
+
+  /* 5. Sección "Contacto" */
+  .contact-heading {
+    text-align: center;
+  }
+  .contact-section {
+    padding: 2em;
+  }
+  .redes {
+    flex-direction: column; /* Apila las tarjetas de redes */
+    align-items: center;
+    gap: 1.5em;
+  }
+  .cardRedes {
+    max-width: none;
+    width: 90%; /* Ajusta el ancho de las tarjetas de redes */
+  }
+
+  /* 6. Footer */
+  .footer-content h2 {
+    font-size: 2em;
+    text-align: center;
+  }
+  .footer-content h5 {
+    font-size: 1.2em;
+  }
+  .sotial-networks {
+    width: 90%;
+    max-width: 300px;
   }
 }

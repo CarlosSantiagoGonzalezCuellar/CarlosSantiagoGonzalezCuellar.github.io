@@ -1,51 +1,111 @@
-/* responsive-aboutMe.css */
-/* Corrige apilamiento de imagen y texto, manteniendo proporciones */
-
-@media (max-width: 1024px) {
-  .about-container {
-    padding: 1rem;
-  }
-}
-
+/* Estilos responsivos para aboutMe.html */
 @media (max-width: 768px) {
-  .about-container {
-    display: flex;
+  /* 1. Navegación */
+  .navbar {
     flex-direction: column;
     align-items: center;
+    gap: 1em;
+  }
+  .menu {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    gap: 0.5em;
+  }
+  .menu li {
+    width: 100%;
     text-align: center;
-    gap: 1rem;
+  }
+  .menu a {
+    display: block;
   }
 
-  .about-container img {
-    width: 85%;
-    max-width: 350px;
+  /* 2. Sección principal (Hero) */
+  .main {
+    grid-template-columns: 1fr;
+    width: 90vw;
     height: auto;
-    margin-bottom: 1rem;
-  }
-
-  .about-text {
-    width: 90%;
-    font-size: 1rem;
-    line-height: 1.6;
-  }
-}
-
-@media (max-width: 480px) {
-  body {
-    font-size: 0.9rem;
-    overflow-x: hidden;
-  }
-
-  .about-text h2 {
-    font-size: 1.4rem;
-  }
-
-  .about-text p {
-    font-size: 0.95rem;
-  }
-
-  footer {
+    margin: 2em auto;
     text-align: center;
-    padding: 1rem;
+  }
+  .main img {
+    order: -1;
+    width: 80%;
+    max-width: 300px;
+    height: auto;
+    margin: 0 auto;
+  }
+  h1 {
+    font-size: 2.5em;
+  }
+
+  /* 3. Sección "Desempeño" (About) */
+  .about {
+    grid-template-columns: 1fr;
+    width: 100vw;
+  }
+  .about img {
+    grid-column: 1 / -1;
+    width: 100%;
+  }
+  .about-info {
+    grid-column: 1 / -1;
+    padding: 2em;
+    text-align: center;
+  }
+  .divider {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* 4. Sección "Mis Estudios" (Portfolio) */
+  .portfolio-heading {
+    padding: 3em 2em 2em 2em;
+    text-align: center;
+  }
+  .estudios {
+    width: 90vw;
+    height: auto; /* CRÍTICO: quita la altura fija de 30vw */
+    flex-direction: column; /* Apila las tarjetas de estudios */
+    align-items: center;
+    gap: 2em; /* Añade espacio entre tarjetas */
+    padding-bottom: 3em;
+  }
+  .myCard {
+    width: 90%;
+    max-width: 300px;
+  }
+
+  /* 5. Sección "Contacto" */
+  .contact-heading {
+    text-align: center;
+  }
+  .contact-section {
+    padding: 2em;
+  }
+  .redes {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5em;
+  }
+  .cardRedes {
+    max-width: none;
+    width: 90%;
+  }
+  .container-contact {
+    margin-top: 3em; /* Reduce el margen superior */
+  }
+
+  /* 6. Footer */
+  .footer-content h2 {
+    font-size: 2em;
+    text-align: center;
+  }
+  .footer-content h5 {
+    font-size: 1.2em;
+  }
+  .sotial-networks {
+    width: 90%;
+    max-width: 300px;
   }
 }
